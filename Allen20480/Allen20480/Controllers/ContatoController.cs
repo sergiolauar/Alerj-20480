@@ -18,7 +18,7 @@ namespace Allen20480.Controllers
         [HttpPost]
         public ActionResult EnviaMensagem(string nome, string email, string mensagem)
         {
-            System.Threading.Thread.Sleep(5000);
+          //  System.Threading.Thread.Sleep(5000);
 
             return Json(new
             {
