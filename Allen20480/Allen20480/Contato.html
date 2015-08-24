@@ -95,8 +95,26 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="Scripts/jquery-1.9.1.min.js"> </script>
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/App/ajaxUtil.js"></script>
 
     <script type="text/javascript">
+
+       var sucesso= function(data) {
+           if (data.Message === "OK") {
+                var $txtNome = $("#txtNome");
+                var $txtEmail = $("#txtEmail");
+                var $txtMensagem = $("#txtMensagem");
+                $("div.alert").show("slow");
+                $txtMensagem.val("")
+                $txtEmail.val("");
+                $txtNome.val("");
+            }
+            $("#btnEnviar").button("reset");
+        }
+
+
+        function erro() { }
+
         function desabilita() {
             $("div.alert").hide("slow");
         }
@@ -127,7 +145,51 @@
                 if (!isValid)
                     return false;
                 $("#btnEnviar").button("loading");
-                $.ajax({
+
+                var ajax = new Ajax({
+                    url: "http://localhost:3269/contato/enviamensagem",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        nome: $txtNome.val(),
+                        email: $txtEmail.val(),
+                        mensagem: $txtMensagem.val()
+                    })
+                });
+
+                ajax.makeRequest().done(
+                        function (data) {
+                            if (data.Message === "OK") {
+                                $("div.alert").show("slow");
+                                $txtMensagem.val("");
+                                $txtEmail.val("");
+                                $txtNome.val("");
+                            }
+                            $("#btnEnviar").button("reset");
+                        }).fail(function(){
+                        });
+
+
+                var ajaxv = new AjaxNovo({
+                    url: "http://localhost:3269/contato/enviamensagem",
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        nome: $txtNome.val(),
+                        email: $txtEmail.val(),
+                        mensagem: $txtMensagem.val()
+                    }),
+                    success: sucesso,
+                    error : erro()
+                });
+
+                ajaxv.makeRequest();
+
+              
+
+              /*  $.ajax({
                     url: "http://localhost:3269/contato/enviamensagem",
                     type: "POST",
                     dataType: "json",
@@ -149,7 +211,7 @@
                     },
                     error: function () {
                     }
-                });
+                });*/
             });
         });
     </script>
