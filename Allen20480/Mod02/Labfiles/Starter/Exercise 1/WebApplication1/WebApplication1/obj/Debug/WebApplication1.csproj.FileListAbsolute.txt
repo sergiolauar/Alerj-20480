@@ -1,0 +1,5 @@
+E:\Mod02\Labfiles\Starter\Exercise 1\WebApplication1\WebApplication1\bin\WebApplication1.dll
+E:\Mod02\Labfiles\Starter\Exercise 1\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+E:\Mod02\Labfiles\Starter\Exercise 1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+E:\Mod02\Labfiles\Starter\Exercise 1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+E:\Mod02\Labfiles\Starter\Exercise 1\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb

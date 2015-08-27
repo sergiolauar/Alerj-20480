@@ -1,0 +1,4 @@
+E:\Mod10\Labfiles\Solution\Exercise 2\ContosoConf\bin\ContosoConf.dll
+E:\Mod10\Labfiles\Solution\Exercise 2\ContosoConf\bin\ContosoConf.pdb
+E:\Mod10\Labfiles\Solution\Exercise 2\ContosoConf\obj\Debug\ContosoConf.dll
+E:\Mod10\Labfiles\Solution\Exercise 2\ContosoConf\obj\Debug\ContosoConf.pdb
