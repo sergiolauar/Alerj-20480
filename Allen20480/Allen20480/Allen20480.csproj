@@ -129,6 +129,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Animacao.html" />
     <Content Include="Contato.html" />
     <Content Include="index.html" />
     <Content Include="Content\bootstrap-theme.css" />
